@@ -10,6 +10,8 @@
 3. 개인 버전관리는 따로 branch에서 작업해주세요.
 
 # 학습 상황
+[문제 리스트](https://docs.google.com/spreadsheets/d/1k-k4bZ0ZTk2QLTNmRjmYSnTO9jpEqH8-wtH_ECnQ6Ug/edit#gid=0)
+
 <table>
   <tr>
     <td rowspan="2">1주차</td>
