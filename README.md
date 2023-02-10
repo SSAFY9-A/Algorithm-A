@@ -17,8 +17,10 @@
   <tr>
     <td rowspan="2" colspan="2"></td>
     <td colspan="6" align="center">통과 시간</td>
+    <td rowspan="2">발표자</td>
   </tr>
 
+  
 
 <!-- 목차 -->
   <tr>
@@ -42,6 +44,7 @@
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq">[SWEA 1949] 등산로 조성</a> </td>
@@ -49,6 +52,7 @@
     <td></td>
     <td></td>
     <td>14 ms</td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>
@@ -64,6 +68,7 @@
     <td></td>
     <td></td>
     <td></td>
+    <td>채문희</td>
   </tr>
   <tr>
     <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu">[SWEA 1953] 탈주범 검거</a> </td>
@@ -73,6 +78,7 @@
     <td></td>
     <td></td>
     <td></td>
+    <td>송유빈</td>
   </tr>
   <tr>
     <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 2105] 디저트 카페</a> </td>
@@ -82,6 +88,7 @@
     <td></td>
     <td></td>
     <td></td>
+    <td>홍의선</td>
   </tr>
   
 <!-- 3주차 -->
@@ -94,8 +101,10 @@
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
