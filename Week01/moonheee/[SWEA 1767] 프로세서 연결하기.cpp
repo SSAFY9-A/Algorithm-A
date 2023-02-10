@@ -2,177 +2,182 @@
 #include <vector>
 #include <limits>
 using namespace std;
-int map[12][12]; // 0: ºñ¿©ÀÖ´Â °ø°£ / 1: core / 2: Àü¼±
-int count_core[13]; // index : ¿¬°áµÈ core ¼ö / value : core¼ö¿¡ ÇØ´çµÇ´Â ÃÖ¼Ò Àü¼± ±æÀÌ
-int count2; // ÇöÀç ³ëµåÀÇ Àü¼±ÀÇ ±æÀÌ
-int min_count; // max core¿¡ ¿¬°áµÈ ÃÖ¼Ò Àü¼± ±æÀÌ (°¡Áö Ä¡±â)
-int max_core; // ÃÖ´ë core (°¡Áö Ä¡±â)
-int core; // ÇöÀç ¿¬°áµÈ coreÀÇ ¼ö
-int N; // ¸ÊÀÇ °¡·Î, ¼¼·Î
-vector<pair<int, int>> v; // dfsÀÇ node
-// dfsÀÇ ¹æÇâ ¹è¿­
+int map[12][12]; // 0: ë¹„ì—¬ìˆëŠ” ê³µê°„ / 1: core / 2: ì „ì„ 
+int count_core[13]; // index : ì—°ê²°ëœ core ìˆ˜ / value : coreìˆ˜ì— í•´ë‹¹ë˜ëŠ” ìµœì†Œ ì „ì„  ê¸¸ì´
+int count2; // í˜„ì¬ ë…¸ë“œì˜ ì „ì„ ì˜ ê¸¸ì´
+int min_count; // max coreì— ì—°ê²°ëœ ìµœì†Œ ì „ì„  ê¸¸ì´ (ê°€ì§€ ì¹˜ê¸°)
+int max_core; // ìµœëŒ€ core (ê°€ì§€ ì¹˜ê¸°)
+int core; // í˜„ì¬ ì—°ê²°ëœ coreì˜ ìˆ˜
+int N; // ë§µì˜ ê°€ë¡œ, ì„¸ë¡œ
+vector<pair<int, int>> v; // dfsì˜ node
+// dfsì˜ ë°©í–¥ ë°°ì—´
 int direct[4][2] =
 {
-	1, 0, // ¾Æ·¡º®¿¡ ¿¬°á
-	-1, 0, // À§ÂÊº®¿¡ ¿¬°á
-	0, 1, // ¿À¸¥ÂÊº®¿¡ ¿¬°á
-	0, -1 // ¿ŞÂÊ º®¿¡ ¿¬°á
+    1, 0, // ì•„ë˜ë²½ì— ì—°ê²°
+    -1, 0, // ìœ„ìª½ë²½ì— ì—°ê²°
+    0, 1, // ì˜¤ë¥¸ìª½ë²½ì— ì—°ê²°
+    0, -1 // ì™¼ìª½ ë²½ì— ì—°ê²°
 };
-
-// 1. map ÃÊ±âÈ­
-// 2. dfs node º¤ÅÍ ÃÊ±âÈ­ (º®¿¡ ÀÖ´Â core´Â ³ÖÁö ¾Ê´Â´Ù)
+ 
+// 1. map ì´ˆê¸°í™”
+// 2. dfs node ë²¡í„° ì´ˆê¸°í™” (ë²½ì— ìˆëŠ” coreëŠ” ë„£ì§€ ì•ŠëŠ”ë‹¤)
 void input()
 {
-	for (int y = 0; y < N; y++)
-		for (int x = 0; x < N; x++)
-			cin >> map[y][x];
-	int flag;
-	for (int y = 0; y < N; y++)
-		for (int x = 0; x < N; x++)
-		{
-			if (map[y][x] && y != 0 && x != 0)
-			{
-				flag = 0;
-				for (int idx = 0; idx < 4; idx++)
-				{
-					int dy = y + direct[idx][0];
-					int dx = x + direct[idx][1];
-					if (dy >= 0 && dx >= 0 && dy < N && dx < N)
-						if (map[dy][dx] != 1)
-							flag = 1;
-				}
-				if (flag)
-					v.push_back(make_pair(y, x));
-			}
-		}
-	return;
+    for (int y = 0; y < N; y++)
+        for (int x = 0; x < N; x++)
+            cin >> map[y][x];
+    int flag;
+    for (int y = 0; y < N; y++)
+        for (int x = 0; x < N; x++)
+        {
+            if (map[y][x] && y != 0 && x != 0 && y != N - 1 && x != N - 1)
+            {
+                flag = 0;
+                for (int idx = 0; idx < 4; idx++)
+                {
+                    int dy = y + direct[idx][0];
+                    int dx = x + direct[idx][1];
+                    if (dy >= 0 && dx >= 0 && dy < N && dx < N)
+                        if (map[dy][dx] != 1)
+                            flag = 1;
+                }
+                if (flag)
+                    v.push_back(make_pair(y, x));
+            }
+        }
+    return;
 }
-
-// node(º¤ÅÍÀÇ now¹øÂ°)¿¡¼­ direct_idx°¡ °¡¸®Å°´Â º®À¸·Î ¿¬°áÀÌ °¡´ÉÇÑÁö Ã¼Å©
-// ¹İÈ¯°ª 0 , 1
+ 
+// node(ë²¡í„°ì˜ nowë²ˆì§¸)ì—ì„œ direct_idxê°€ ê°€ë¦¬í‚¤ëŠ” ë²½ìœ¼ë¡œ ì—°ê²°ì´ ê°€ëŠ¥í•œì§€ ì²´í¬
+// ë°˜í™˜ê°’ 0 , 1
 int is_valid(int now, int direct_idx)
 {
-	int dy = v[now].first + direct[direct_idx][0];
-	int dx = v[now].second + direct[direct_idx][1];
-	while (dy >= 0 && dx >= 0 && dy < N && dx < N)
-	{
-		// Àü¼±(3)°ú node(1)À» ¸¸³µ´Ù¸é 0 ¹İÈ¯
-		if (map[dy][dx])
-			return 0;
-		dy += direct[direct_idx][0];
-		dx += direct[direct_idx][1];
-	}
-	return 1;
+    int dy = v[now].first + direct[direct_idx][0];
+    int dx = v[now].second + direct[direct_idx][1];
+    while (dy >= 0 && dx >= 0 && dy < N && dx < N)
+    {
+        // ì „ì„ (3)ê³¼ node(1)ì„ ë§Œë‚¬ë‹¤ë©´ 0 ë°˜í™˜
+        if (map[dy][dx])
+            return 0;
+        dy += direct[direct_idx][0];
+        dx += direct[direct_idx][1];
+    }
+    return 1;
 }
-
-// node(º¤ÅÍÀÇ now¹øÂ°)¿¡¼­ direct_idx°¡ °¡¸®Å°´Â º®À¸·Î Àü¼± ¿¬°á
-// map¿¡ Àü¼±(3)À» Ã¤¿ö³ÖÀ½
+ 
+// node(ë²¡í„°ì˜ nowë²ˆì§¸)ì—ì„œ direct_idxê°€ ê°€ë¦¬í‚¤ëŠ” ë²½ìœ¼ë¡œ ì „ì„  ì—°ê²°
+// mapì— ì „ì„ (3)ì„ ì±„ì›Œë„£ìŒ
 int set_map(int now, int direct_idx)
 {
-	int result = 0;
-	int dy = v[now].first + direct[direct_idx][0];
-	int dx = v[now].second + direct[direct_idx][1];
-	while (dy >= 0 && dx >= 0 && dy < N && dx < N)
-	{
-		map[dy][dx] = 3;
-		result++;
-		dy += direct[direct_idx][0];
-		dx += direct[direct_idx][1];
-	}
-	return result;
+    int result = 0;
+    int dy = v[now].first + direct[direct_idx][0];
+    int dx = v[now].second + direct[direct_idx][1];
+    while (dy >= 0 && dx >= 0 && dy < N && dx < N)
+    {
+        map[dy][dx] = 3;
+        result++;
+        dy += direct[direct_idx][0];
+        dx += direct[direct_idx][1];
+    }
+    return result;
 }
-
-// node(º¤ÅÍÀÇ now¹øÂ°)¿¡¼­ direct_idx°¡ °¡¸®Å°´Â º®À¸·Î Àü¼± ÇØÁ¦
-// map¿¡ Àü¼±ÀÌ ¿´´ø °ø°£À» 0À¸·Î Ã¤¿ö³ÖÀ½
+ 
+// node(ë²¡í„°ì˜ nowë²ˆì§¸)ì—ì„œ direct_idxê°€ ê°€ë¦¬í‚¤ëŠ” ë²½ìœ¼ë¡œ ì „ì„  í•´ì œ
+// mapì— ì „ì„ ì´ ì˜€ë˜ ê³µê°„ì„ 0ìœ¼ë¡œ ì±„ì›Œë„£ìŒ
 int reset_map(int now, int direct_idx)
 {
-	int result = 0;
-	int dy = v[now].first + direct[direct_idx][0];
-	int dx = v[now].second + direct[direct_idx][1];
-	while (dy >= 0 && dx >= 0 && dy < N && dx < N)
-	{
-		map[dy][dx] = 0;
-		result++;
-		dy += direct[direct_idx][0];
-		dx += direct[direct_idx][1];
-	}
-	return result;
+    int result = 0;
+    int dy = v[now].first + direct[direct_idx][0];
+    int dx = v[now].second + direct[direct_idx][1];
+    while (dy >= 0 && dx >= 0 && dy < N && dx < N)
+    {
+        map[dy][dx] = 0;
+        result++;
+        dy += direct[direct_idx][0];
+        dx += direct[direct_idx][1];
+    }
+    return result;
 }
-
+ 
 void dfs(int now)
 {
-	// ±âÀú Á¶°Ç
-	if (now >= v.size())
-	{
-		// ÃÖ´ë core¸¸Å­ Ã£°Å³ª ´õ ¸¹Àº core¸¦ Ã£¾ÒÀ» ¶§
-		if (core >= max_core)
-		{
-			// ´õ ¸¹Àº core¸¦ Ã£¾ÒÀ» ¶§
-			if (core != max_core)
-			{
-				// max_core °»½Å
-				max_core = core;
-				// max_core¿¡ ¿¬°áµÈ ÃÖ¼Ò Àü¼± ±æÀÌ °»½Å
-				min_count = count_core[max_core];
-			}
-			// °°Àº core¸¦ ¿¬°áÇÏ°í ´õ ÀÛÀº Àü¼± ±æÀÌ¸¦ Ã£¾ÒÀ» ¶§
-			if (count2 < count_core[core])
-			{
-				count_core[core] = count2;
-				min_count = count2;
-			}
-		}
-		return;
-	}
-
-	// ºĞ±âÁ¡ (4°³ÀÇ º®¹æÇâ)
-	for (int idx = 0; idx < 4; idx++)
-	{
-		if (is_valid(now, idx))
-		{
-			// Àü¼± ¿¬°á
-			core++;
-			count2 += set_map(now, idx);
-			// °¡Áö Ä¡±â (ÀÌ¹Ì Àü¼±À» ³Ê¹« ¸¹ÀÌ »ç¿ëÇÑ °æ¿ì ºĞ±â ÇÏÁö ¾ÊÀ½)
-			// ¹ØÀÇ return¿¡¼­ Å½»ö Á¾·á
-			if (count2 < min_count)
-				dfs(now + 1);
-			// Àü¼± ÃÊ±âÈ­
-			core--;
-			count2 -= reset_map(now, idx);
-		}
-	}
-	// core¸¦ Àü¼±¿¡ ¿¬°áÇÏÁö ¾Ê´Â ºĞ±âÁ¡
-	// °¡Áö Ä¡±â (ÇöÀç ³Ê¹« ¸¹Àº core°¡ ¿¬°áµÇÁö ¾Ê¾Æ¼­ ¾ÕÀ¸·Î ´Ù ¿¬°áÇØµµ
-	// max_core°¡ µÇÁö ¾Ê´Â °æ¿ì)
-	if (max_core && now - core + 1 < v.size() - max_core)
-		dfs(now + 1);
-	return;
+    // ê¸°ì € ì¡°ê±´
+    if (now >= v.size())
+    {
+        // ìµœëŒ€ coreë§Œí¼ ì°¾ê±°ë‚˜ ë” ë§ì€ coreë¥¼ ì°¾ì•˜ì„ ë•Œ
+        if (core >= max_core)
+        {
+            // ë” ë§ì€ coreë¥¼ ì°¾ì•˜ì„ ë•Œ
+            if (core != max_core)
+            {
+                // max_core ê°±ì‹ 
+                max_core = core;
+                // max_coreì— ì—°ê²°ëœ ìµœì†Œ ì „ì„  ê¸¸ì´ ê°±ì‹ 
+                min_count = count_core[max_core];
+            }
+            // ê°™ì€ coreë¥¼ ì—°ê²°í•˜ê³  ë” ì‘ì€ ì „ì„  ê¸¸ì´ë¥¼ ì°¾ì•˜ì„ ë•Œ
+            if (count2 < count_core[core])
+            {
+                count_core[core] = count2;
+                min_count = count2;
+            }
+        }
+        return;
+    }
+ 
+    // ë¶„ê¸°ì  (4ê°œì˜ ë²½ë°©í–¥)
+    for (int idx = 0; idx < 4; idx++)
+    {
+        if (is_valid(now, idx))
+        {
+            // ì „ì„  ì—°ê²°
+            core++;
+            count2 += set_map(now, idx);
+            // ê°€ì§€ ì¹˜ê¸° (ì´ë¯¸ ì „ì„ ì„ ë„ˆë¬´ ë§ì´ ì‚¬ìš©í•œ ê²½ìš° ë¶„ê¸° í•˜ì§€ ì•ŠìŒ)
+            // ë°‘ì˜ returnì—ì„œ íƒìƒ‰ ì¢…ë£Œ
+            if (count2 < min_count || core >= max_core)
+                dfs(now + 1);
+            // ì „ì„  ì´ˆê¸°í™”
+            core--;
+            count2 -= reset_map(now, idx);
+        }
+    }
+    // coreë¥¼ ì „ì„ ì— ì—°ê²°í•˜ì§€ ì•ŠëŠ” ë¶„ê¸°ì 
+    // ê°€ì§€ ì¹˜ê¸° (í˜„ì¬ ë„ˆë¬´ ë§ì€ coreê°€ ì—°ê²°ë˜ì§€ ì•Šì•„ì„œ ì•ìœ¼ë¡œ ë‹¤ ì—°ê²°í•´ë„
+    // max_coreê°€ ë˜ì§€ ì•ŠëŠ” ê²½ìš°)
+    if (now - core + 1 <= v.size() - max_core)
+        dfs(now + 1);
+    return;
 }
-
+ 
 int main()
 {
-	int T;
-	cin >> T;
-
-	for (int i_t = 0; i_t < T; i_t++)
-	{
-		// Å×½ºÆ®º° ÃÊ±âÈ­
-		cin >> N;
-		count2 = 0;
-		core = 0;
-		max_core = 0;
-		min_count = numeric_limits<int>::max();
-		v.clear();
-		for (int idx = 0; idx < 13; idx++)
-			count_core[idx] = numeric_limits<int>::max();
-		input();
-		// ÁÁÀº ½ÃÀÛ ³ëµå°¡ ÀÖÀ»±î?
-		dfs(0);
-		cout << "#" << i_t + 1 << " " << count_core[max_core] << "\n";
-	}
-	return 0;
+    int T;
+    cin >> T;
+ 
+    for (int i_t = 0; i_t < T; i_t++)
+    {
+        // í…ŒìŠ¤íŠ¸ë³„ ì´ˆê¸°í™”
+        cin >> N;
+        count2 = 0;
+        core = 0;
+        max_core = 0;
+        min_count = numeric_limits<int>::max();
+        v.clear();
+        for (int idx = 0; idx < 13; idx++)
+            count_core[idx] = numeric_limits<int>::max();
+        input();
+        // ì¢‹ì€ ì‹œì‘ ë…¸ë“œê°€ ìˆì„ê¹Œ?
+        dfs(0);
+        if (count_core[max_core] == numeric_limits<int>::max())
+            cout << "#" << i_t + 1 << " " << 0 << "\n";
+        else
+        cout << "#" << i_t + 1 << " " << count_core[max_core] << "\n";
+    }
+    return 0;
 }
-
-// 1Â÷ 49/50
-// 2Â÷ 49/50
+ 
+// 1ì°¨ 49/50
+// 2ì°¨ 49/50 ë²½ì— ê°€ë‘ì–´ì ¸ìˆëŠ” 1
+// 3ì°¨ 49/50 ë‹¤ë¥¸ ë…¸ë“œì—ì„œ ì‹œì‘í•  ë•Œ ( êµ³ì´... )
+// 4ì°¨ 47/50 138ë²ˆì¤„ ì•ˆ ì •ë¦¬ í•´ì¤Œ
