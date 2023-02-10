@@ -41,7 +41,7 @@
     <td align="right">18 ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">1,120ms</td>
     <td align="right">227 ms</td>
     <td align="right"></td>
     <td></td>
