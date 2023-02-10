@@ -40,8 +40,8 @@
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf">[SWEA 1767]<br> 프로세서 연결하기</a></td>
     <td align="right">18 ms</td>
     <td align="right"></td>
-    <td align="right"></td>
     <td align="right">1,120ms</td>
+    <td align="right"></td>
     <td align="right">227 ms</td>
     <td align="right"></td>
     <td></td>
