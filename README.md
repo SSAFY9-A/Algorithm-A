@@ -37,7 +37,7 @@
 <!-- 1주차 -->
   <tr>
     <td rowspan="2">1주차</td>
-    <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf">[SWEA 1767] 프로세서 연결하기</a></td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf">[SWEA 1767]<br> 프로세서 연결하기</a></td>
     <td align="right">18 ms</td>
     <td align="right"></td>
     <td align="right"></td>
@@ -47,7 +47,7 @@
     <td></td>
   </tr>
   <tr>
-    <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq">[SWEA 1949] 등산로 조성</a> </td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq">[SWEA 1949]<br> 등산로 조성</a> </td>
     <td align="right">11 ms</td>
     <td align="right"></td>
     <td align="right"></td>
@@ -61,7 +61,7 @@
 <!-- 2주차 -->
   <tr>
     <td rowspan="3">2주차</td>
-    <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 1952] 수영장</a></td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 1952]<br> 수영장</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -71,7 +71,7 @@
     <td>채문희</td>
   </tr>
   <tr>
-    <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu">[SWEA 1953] 탈주범 검거</a> </td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu">[SWEA 1953]<br> 탈주범 검거</a> </td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -81,7 +81,7 @@
     <td>송유빈</td>
   </tr>
   <tr>
-    <td> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 2105] 디저트 카페</a> </td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 2105]<br> 디저트 카페</a> </td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
