@@ -61,17 +61,17 @@
 <!-- 2주차 -->
   <tr>
     <td rowspan="3">2주차</td>
-    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 1952]<br> 수영장</a></td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq">[SWEA 1952]<br> 수영장</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">9 ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td>채문희</td>
   </tr>
   <tr>
-    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu">[SWEA 1953]<br> 탈주범 검거</a> </td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 1953]<br> 탈주범 검거</a> </td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -81,7 +81,7 @@
     <td>송유빈</td>
   </tr>
   <tr>
-    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 2105]<br> 디저트 카페</a> </td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu">[SWEA 2105]<br> 디저트 카페</a> </td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
