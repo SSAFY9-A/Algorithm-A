@@ -65,7 +65,7 @@
     <td align="right">13ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">9 ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td>채문희</td>
@@ -75,7 +75,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">19 ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td>송유빈</td>
