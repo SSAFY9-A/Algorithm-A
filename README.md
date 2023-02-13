@@ -38,21 +38,21 @@
   <tr>
     <td rowspan="2">1주차</td>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf">[SWEA 1767]<br> 프로세서 연결하기</a></td>
-    <td align="right">18 ms</td>
+    <td align="right">18ms</td>
     <td align="right"></td>
     <td align="right">1,120ms</td>
     <td align="right"></td>
-    <td align="right">227 ms</td>
+    <td align="right">227ms</td>
     <td align="right"></td>
     <td></td>
   </tr>
   <tr>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq">[SWEA 1949]<br> 등산로 조성</a> </td>
-    <td align="right">11 ms</td>
+    <td align="right">11ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right">14 ms</td>
-    <td align="right">7 ms</td>
+    <td align="right">14ms</td>
+    <td align="right">7ms</td>
     <td align="right"></td>
     <td></td>
   </tr>
@@ -65,17 +65,17 @@
     <td align="right">13ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right">9 ms</td>
+    <td align="right">9ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td>채문희</td>
   </tr>
   <tr>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 1953]<br> 탈주범 검거</a> </td>
+    <td align="right">24ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
-    <td align="right">19 ms</td>
+    <td align="right">19ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td>송유빈</td>
