@@ -74,7 +74,7 @@
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq">[SWEA 1953]<br> 탈주범 검거</a> </td>
     <td align="right">24ms</td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">19ms</td>
     <td align="right">19ms</td>
     <td align="right"></td>
     <td align="right"></td>
