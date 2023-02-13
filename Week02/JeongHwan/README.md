@@ -18,19 +18,15 @@
 ## 전역변수
 type|변수명|의미|
 ---|---|---|
-int|N|멕시노스의 너비|
-int[][]|map|멕시노스 이차원배열|
-int|min_length|전선길이의 최솟값|
-int|acc_length|전선길이의 누적값|
-int|max_core|연결된 코어수 최댓값|
-int|acc_core|연결된 코어수 누적값|
-struct node[]|cord_core|코어의 좌표를 저장하는 구조체 배열|
-int|len_core_arr|코어의 좌표 개수(cord_core의 인덱스 범위다|
+int[]|price|4개의 이용권의 가격|
+int[]|calender|1년 이용 계획|
+int|min_cost|1년 수영장 비용 최솟값|
+int|acc_cost|1년 수영장 비용 누적값|
+int[]|next_month|이용권당 넘어가야 할 다음달|
 
 ## 함수 프로토 타입
-* int isValid(node n, int dir) 코어의 좌표 n과 연결할 방향 dir을 입력받아 전선을 연결할 수 있으면 1을 없으면 0을 리턴함.
-* int connect(node n, int dir) 코어의 좌표 n과 연결할 방향 dir을 입력받아 전선을 연결하고(map변수를 수정하고) 연결한 전선 수를 리턴함.
-* void dfs(int level) 코어의 index(0)을 코어를 연결가능한 모든 경우의 수를 완전탐색하는 함수. 
+* void init(void) 이용권 가격과 1년 계획을 입력받고 1년 수영장 비용최솟값, 1년 수영장 비용 누적값을 초기화 하는 함수
+* void dfs(int level) 현재 월을 입력으로 받아 모든 경우의 수를 완전 탐색을 함
 
 ## 기억해야할 점
 * 최대값을 구하는 문제에서 완전탐색을 할 경우 재귀호출 마다 그 상황에서 가질 수 있는 최대값이 이미 구해진 최댓값보다 작다면 더이상 재귀호출하지 말고 리턴하면 경우의수를 많이 줄일 수 있다.
