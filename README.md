@@ -39,7 +39,7 @@
     <td rowspan="2">1주차</td>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf">[SWEA 1767]<br> 프로세서 연결하기</a></td>
     <td align="right">18ms</td>
-    <td align="right"></td>
+    <td align="right">94ms</td>
     <td align="right">1,120ms</td>
     <td align="right"></td>
     <td align="right">227ms</td>
@@ -49,7 +49,7 @@
   <tr>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq">[SWEA 1949]<br> 등산로 조성</a> </td>
     <td align="right">11ms</td>
-    <td align="right"></td>
+    <td align="right">12ms</td>
     <td align="right"></td>
     <td align="right">14ms</td>
     <td align="right">7ms</td>
@@ -63,7 +63,7 @@
     <td rowspan="3">2주차</td>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq">[SWEA 1952]<br> 수영장</a></td>
     <td align="right">13ms</td>
-    <td align="right"></td>
+    <td align="right">13ms</td>
     <td align="right"></td>
     <td align="right">9ms</td>
     <td align="right"></td>
