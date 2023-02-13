@@ -50,7 +50,7 @@
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq">[SWEA 1949]<br> 등산로 조성</a> </td>
     <td align="right">11ms</td>
     <td align="right">12ms</td>
-    <td align="right"></td>
+    <td align="right">14ms</td>
     <td align="right">14ms</td>
     <td align="right">7ms</td>
     <td align="right"></td>
