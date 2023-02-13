@@ -66,7 +66,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right">9ms</td>
-    <td align="right"></td>
+    <td align="right">12ms</td>
     <td align="right"></td>
     <td>채문희</td>
   </tr>
