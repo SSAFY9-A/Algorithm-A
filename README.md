@@ -43,7 +43,7 @@
     <td align="right">1,120ms</td>
     <td align="right"></td>
     <td align="right">227ms</td>
-    <td align="right">1272ms</td>
+    <td align="right">1,272ms</td>
     <td></td>
   </tr>
   <tr>
