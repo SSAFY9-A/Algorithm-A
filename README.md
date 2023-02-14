@@ -77,7 +77,7 @@
     <td align="right">19ms</td>
     <td align="right">19ms</td>
     <td align="right"></td>
-    <td align="right">28</td>
+    <td align="right">28ms</td>
     <td>송유빈</td>
   </tr>
   <tr>
