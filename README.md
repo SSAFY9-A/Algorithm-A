@@ -81,7 +81,7 @@
     <td>송유빈</td>
   </tr>
   <tr>
-    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu">[SWEA 2105]<br> 디저트 카페</a> </td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu">[SWEA 2115] <br>벌꿀채취</a> </td>
     <td align="right">88ms</td>
     <td align="right"></td>
     <td align="right"></td>
