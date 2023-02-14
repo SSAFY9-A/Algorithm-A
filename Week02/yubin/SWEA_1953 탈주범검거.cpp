@@ -10,7 +10,9 @@ int CNT;
 int N, M;
 int L;
 int R, C;
-int Ly, Lx;
+
+int Ly, Lx; //마지막 좌표값이 안들어가는 것을 방지
+
 vector<int> arr[7];
 
 struct node {
@@ -30,6 +32,8 @@ void Pre()
 	arr[6] = { 0,-1,-1,0 };
 
 };
+
+//cy,cx 에서도 반대로 y,x가 연결되는지 확인. 
 int check(int cy, int cx, int y, int x)
 {
 	int mapNum = map[cy][cx] - 1;
@@ -43,6 +47,7 @@ int check(int cy, int cx, int y, int x)
 	}
 	return 0;
 }
+
 void func(int y, int x) {
 	queue<node>q;
 	q.push({ y,x });
@@ -52,7 +57,7 @@ void func(int y, int x) {
 		//구조물에 따라서 확인이 달라짐. 
 		node now = q.front();
 		q.pop();
-		
+
 		int mapYX = map[now.y][now.x] - 1;
 		int S = arr[mapYX].size();
 		for (int i = 0; i < S / 2; i++)
@@ -69,7 +74,7 @@ void func(int y, int x) {
 			via[cy][cx] = via[now.y][now.x] + 1;
 			//마지막 처리,,!
 			if (via[cy][cx] > L) { CNT++; Ly = cy; Lx = cx; return; }
-		
+
 			//cout << now.y << "," << now.x << " " << cy << "," << cx ;
 			CNT++;
 			//cout << " cnt :" << CNT <<" via : "<<via[cy][cx]<< "\n";
