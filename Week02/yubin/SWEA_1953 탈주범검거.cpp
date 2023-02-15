@@ -54,11 +54,12 @@ void func(int y, int x) {
 	via[y][x] = 1;
 	while (!q.empty())
 	{
-		//구조물에 따라서 확인이 달라짐. 
+		
 		node now = q.front();
 		q.pop();
 
 		int mapYX = map[now.y][now.x] - 1;
+		//구조물에 따라서 확인이 달라짐. S는 방향배열의 size.
 		int S = arr[mapYX].size();
 		for (int i = 0; i < S / 2; i++)
 		{
@@ -73,7 +74,7 @@ void func(int y, int x) {
 
 			via[cy][cx] = via[now.y][now.x] + 1;
 			//마지막 처리,,!
-			if (via[cy][cx] > L) { CNT++; Ly = cy; Lx = cx; return; }
+			if (via[cy][cx] > L) return ;
 
 			//cout << now.y << "," << now.x << " " << cy << "," << cx ;
 			CNT++;
@@ -96,7 +97,7 @@ int main()
 	for (int t = 0; t < tc; t++)
 	{
 		cin >> N >> M >> R >> C >> L;
-		CNT = 1;
+		CNT = 0;
 		memset(via, 0, sizeof(via));
 
 		for (int i = 0; i < N; i++)
@@ -107,7 +108,7 @@ int main()
 		func(R, C);
 
 		if (via[Ly][Lx] <= L)CNT++;
-		cout << CNT - 1 << '\n';
+		cout << CNT  << '\n';
 
 
 	}
