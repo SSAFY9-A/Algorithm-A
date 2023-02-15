@@ -84,7 +84,7 @@
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu">[SWEA 2115] <br>벌꿀채취</a> </td>
     <td align="right">6ms</td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">185 ms</td>
     <td align="right"></td>
     <td align="right">65ms</td>
     <td align="right">100ms</td>
