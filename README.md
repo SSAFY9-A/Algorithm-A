@@ -85,7 +85,7 @@
     <td align="right">6ms</td>
     <td align="right"></td>
     <td align="right">185 ms</td>
-    <td align="right"></td>
+    <td align="right">11ms</td>
     <td align="right">65ms</td>
     <td align="right">100ms</td>
     <td>홍의선</td>
