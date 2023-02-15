@@ -86,7 +86,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">65ms</td>
     <td align="right">100ms</td>
     <td>홍의선</td>
   </tr>
