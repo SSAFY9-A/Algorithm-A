@@ -93,29 +93,39 @@
   
 <!-- 3주차 -->
   <tr>
-    <td rowspan="2">3주차</td>
-    <td></td>
+    <td rowspan="3">3주차</td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu">[SWEA 2117]<br> 홈 방범 서비스</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>인정환</td>
   </tr>
   <tr>
-    <td></td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl&">[SWEA 2382]<br> 미생물 격리</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>황기찬</td>
+  </tr>
+  <tr>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl">[SWEA 2383] <br>점심 식사시간</a> </td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td>류병민</td>
   </tr>
 <!-- 4주차 -->
   <tr>
-    <td rowspan="2">4주차</td>
+    <td rowspan="3">4주차</td>
     <td></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -126,6 +136,16 @@
     <td></td>
   </tr>
   <tr>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+    <tr>
     <td></td>
     <td align="right"></td>
     <td align="right"></td>
