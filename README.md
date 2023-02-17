@@ -110,7 +110,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">425ms</td>
     <td>황기찬</td>
   </tr>
   <tr>
