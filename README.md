@@ -100,7 +100,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">290ms</td>
     <td>인정환</td>
   </tr>
   <tr>
