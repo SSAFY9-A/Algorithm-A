@@ -95,7 +95,7 @@
   <tr>
     <td rowspan="3">3주차</td>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu">[SWEA 2117]<br> 홈 방범 서비스</a></td>
-    <td align="right"></td>
+    <td align="right">312ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
