@@ -120,7 +120,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">38ms</td>
     <td>류병민</td>
   </tr>
 <!-- 4주차 -->
