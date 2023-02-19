@@ -98,7 +98,7 @@
     <td align="right">312ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">430mx</td>
     <td align="right"></td>
     <td align="right">290ms</td>
     <td>인정환</td>
