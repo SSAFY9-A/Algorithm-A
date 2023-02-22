@@ -108,7 +108,7 @@
     <td align="right">3,820ms</td>
     <td align="right">431ms</td>
     <td align="right">1,292 ms</td>
-    <td align="right"></td>
+    <td align="right">315ms</td>
     <td align="right">164ms</td>
     <td align="right">425ms</td>
     <td>황기찬</td>
