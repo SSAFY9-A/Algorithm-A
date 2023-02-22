@@ -4,7 +4,7 @@
 [SWEA 2117 바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu&)
 
 ## 문제 요약
-N * N 도시, 영역 크기 K, 운영비용 K*K+(k-1)*(k-1),
+N * N 도시, 영역 크기 K, 운영비용 K * K+(k-1)*(k-1),
 하나의 집이 이용할 수 있는 비용 M, 손해를 안보고 가장 많은 집에 서비스를 제공하는 영역을 찾고 서비스를 제공받는 집들의 수를 
 구하라
 
