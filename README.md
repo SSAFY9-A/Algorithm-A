@@ -99,7 +99,7 @@
     <td align="right">512ms</td>
     <td align="right">284ms</td>
     <td align="right">430ms</td>
-    <td align="right"></td>
+    <td align="right">729ms</td>
     <td align="right">290ms</td>
     <td>인정환</td>
   </tr>
