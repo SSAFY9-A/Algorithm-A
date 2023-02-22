@@ -106,7 +106,7 @@
   <tr>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl&">[SWEA 2382]<br> 미생물 격리</a></td>
     <td align="right">3,820ms</td>
-    <td align="right"></td>
+    <td align="right">431ms</td>
     <td align="right">1,292 ms</td>
     <td align="right"></td>
     <td align="right">164ms</td>
