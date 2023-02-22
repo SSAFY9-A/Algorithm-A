@@ -117,7 +117,7 @@
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl">[SWEA 2383] <br>점심 식사시간</a> </td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">18ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right">38ms</td>
