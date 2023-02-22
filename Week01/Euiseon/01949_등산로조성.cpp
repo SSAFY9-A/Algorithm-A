@@ -27,8 +27,9 @@ void dfs(int level, NODE now) {
     }
     int curHeight = map[now.y][now.x];
     int flag;
-    map[now.y][now.x] = 100; // visited처리 , 안 할시에 다음 곳에서 K를 사용하여 다시 되돌아올 수 있으니까..?
-    //ex) 7 (1,4) -> (0,4) 2 -> 위x 오른쪽 x 아래-4 ==1 가능 이렇게...
+    map[now.y][now.x] = 100;
+    // visited처리 , 안 할시에 다음 곳에서 K를 사용하여 다시 되돌아올 수 있으니까
+   
     for (int i = 0; i < 4; i++) {
         int dy = now.y + dir[i][0];
         int dx = now.x + dir[i][1];
@@ -52,7 +53,19 @@ void dfs(int level, NODE now) {
     }
     map[now.y][now.x] = curHeight;
 }
-void input();
+void input()
+{
+    cin >> N >> K;
+    for (int y = 0; y < N; y++)
+    {
+        for (int x = 0; x < N; x++)
+        {
+            cin >> map[y][x];
+            if (highest < map[y][x])
+                highest = map[y][x];
+        }
+    }
+}
 int main()
 {
     int T;
@@ -82,18 +95,4 @@ int main()
         cout << '#' << t + 1 << ' ' << ans[t] << '\n';
     }
     return 0;
-}
-
-void input()
-{
-    cin >> N >> K;
-    for (int y = 0; y < N; y++)
-    {
-        for (int x = 0; x < N; x++)
-        {
-            cin >> map[y][x];
-            if (highest < map[y][x])
-                highest = map[y][x];
-        }
-    }
 }
