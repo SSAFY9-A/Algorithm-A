@@ -4,7 +4,7 @@
 [SWEA 2117 바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu&)
 
 ## 문제 요약
-N*N 도시, 영역 크기 K, 운영비용 K*K+(k-1)*(k-1),
+N * N 도시, 영역 크기 K, 운영비용 K*K+(k-1)*(k-1),
 하나의 집이 이용할 수 있는 비용 M, 손해를 안보고 가장 많은 집에 서비스를 제공하는 영역을 찾고 서비스를 제공받는 집들의 수를 
 구하라
 
@@ -12,7 +12,6 @@ N*N 도시, 영역 크기 K, 운영비용 K*K+(k-1)*(k-1),
 * 50개 테스트케이스를 합쳐서 C의 경우 3초 / C++의 경우 3초 힙, 정적 메모리 합쳐서 256MB 이내, 스택 메모리 1MB 이내
 
 ## 접근
-/*![1](https://user-images.githubusercontent.com/99806622/218507714-c96bd0e9-ef20-4ab2-8405-b7f2b9118956.jpg)*/
 * 홈 방범 서비스의 영역이 flood-fill 알고리즘으로 체우는 방법과 같음
 * 모든 영역에서 flood-fill 알고리즘으로 영역 크기를 늘려가며 집의 수와 비용을 계산하여 집의 수의 최댓값을 구함
 * 얻을 수있는 최대 이익이 현재 영역의 비용보다 적다면 더이상 영역을 늘릴 필요가 없음(back-tracking)
