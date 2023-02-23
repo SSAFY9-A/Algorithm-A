@@ -126,7 +126,7 @@
 <!-- 4주차 -->
   <tr>
     <td rowspan="3">4주차</td>
-    <td></td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy">[SWEA 24777]<br> 차량 정비소</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
