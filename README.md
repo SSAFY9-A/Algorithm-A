@@ -153,7 +153,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>홍의선</td>
   </tr>
 
 <!-- 5주차 -->
