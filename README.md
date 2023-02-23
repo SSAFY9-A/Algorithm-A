@@ -126,7 +126,7 @@
 <!-- 4주차 -->
   <tr>
     <td rowspan="3">4주차</td>
-    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy">[SWEA 24777]<br> 차량 정비소</a></td>
+    <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy">[SWEA 2477]<br> 차량 정비소</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -146,7 +146,7 @@
     <td></td>
   </tr>
     <tr>
-    <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C3">[SWEA 2383] <br>지역구 나누기</a> </td>
+    <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C3">[pro] <br>지역구 나누기</a> </td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
