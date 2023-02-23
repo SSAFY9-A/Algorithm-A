@@ -133,7 +133,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>채문희</td>
   </tr>
   <tr>
     <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2">[pro] <br>주식 거래</a> </td>
@@ -143,7 +143,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>송유빈</td>
   </tr>
     <tr>
     <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C3">[pro] <br>지역구 나누기</a> </td>
