@@ -136,6 +136,39 @@
     <td></td>
   </tr>
   <tr>
+    <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2">[pro] <br>주식 거래</a> </td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C3">[SWEA 2383] <br>지역구 나누기</a> </td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+
+<!-- 5주차 -->
+  <tr>
+    <td rowspan="3">4주차</td>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+  <tr>
     <td></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -154,5 +187,6 @@
     <td align="right"></td>
     <td align="right"></td>
     <td></td>
-  </tr>
+  </tr> 
+ 
 </table>
