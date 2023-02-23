@@ -131,7 +131,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">23ms</td>
     <td align="right"></td>
     <td>채문희</td>
   </tr>
