@@ -158,7 +158,7 @@
 
 <!-- 5주차 -->
   <tr>
-    <td rowspan="3">4주차</td>
+    <td rowspan="3">5주차</td>
     <td></td>
     <td align="right"></td>
     <td align="right"></td>
