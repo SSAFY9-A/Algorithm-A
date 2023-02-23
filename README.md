@@ -119,7 +119,7 @@
     <td align="right"></td>
     <td align="right">18ms</td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">17ms</td>
     <td align="right">38ms</td>
     <td>류병민</td>
   </tr>
