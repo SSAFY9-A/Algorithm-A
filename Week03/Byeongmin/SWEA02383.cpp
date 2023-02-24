@@ -52,40 +52,40 @@ int getDistance(Person p, Stair s) {
 }
 
 int calcAnswer(priority_queue<Person> q0, priority_queue<Person> q1) {
-    // cout << "[" << debug_cnt++ << "]\n";
+    cout << "[" << debug_cnt++ << "]\n";
     int answer = 0;
 
     int DAT0[100] = {0, };
-    // cout << '(';
+    cout << '(';
     while(!q0.empty()) {
         Person p0 = q0.top(); q0.pop();
-        // cout << p0.id << ' ';
+        cout << p0.id << ' ';
         while(DAT0[++p0.cost] >= 3) {}
         for(int i=0;i<stairs[0].length;i++) DAT0[p0.cost+i]++;
         if(answer < p0.cost+stairs[0].length) answer = p0.cost+stairs[0].length;
     }
-    // cout << ")\n";
+    cout << ")\n";
 
-    // for(int i=0;i<10;i++) cout << i << ' ';
-    // cout << '\n';
-    // for(int i=0;i<10;i++) cout << DAT0[i] << ' ';
-    // cout << '\n';
+    for(int i=0;i<10;i++) cout << i << ' ';
+    cout << '\n';
+    for(int i=0;i<10;i++) cout << DAT0[i] << ' ';
+    cout << '\n';
 
 
-    // cout << '(';
+    cout << '(';
     int DAT1[100] = {0, };
     while(!q1.empty()) {
         Person p1 = q1.top(); q1.pop();
-        // cout << p1.id << ' ';
+        cout << p1.id << ' ';
         while(DAT1[++p1.cost] >= 3) {}
         for(int i=0;i<stairs[1].length;i++) DAT1[p1.cost+i]++;
         if(answer < p1.cost+stairs[1].length) answer = p1.cost+stairs[1].length;
     }
-    // cout << ")\n";
-    // for(int i=0;i<10;i++) cout << DAT1[i] << ' ';
-    // cout << '\n' << '\n';
+    cout << ")\n";
+    for(int i=0;i<10;i++) cout << DAT1[i] << ' ';
+    cout << '\n' << '\n';
 
-    // cout << "answer: " << answer << "\n\n";
+    cout << "answer: " << answer << "\n\n";
 
     return answer;
 }
@@ -126,7 +126,7 @@ int main() {
         priority_queue<Person> q0;
         priority_queue<Person> q1;
 
-        // dfs(0, q0, q1);
+        dfs(0, q0, q1);
 
         cout << '#' << t << ' ' << dfs(0, q0, q1) << '\n';
     }
