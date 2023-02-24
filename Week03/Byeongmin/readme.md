@@ -21,6 +21,7 @@ N x N 형태의 map (1은 사람, 2이상의 숫자는 계단의 입구 및 그 
 
 2. ~~이동을 먼저 완료하는 순서대로 정렬~~
 ![greedy 회의실문제](./img/greedy.png) 회의실 배정 문제 (greedy의 대표 문제)
+
 어떤 계단을 선택하느냐에 따라 이동을 완료하는 시간이 달라진다.
 <br>
 #### ~~Dynamic Programming~~
@@ -101,9 +102,11 @@ DAT의 value는 해당 시간에 계단을 내려가고 있는 사람의 수이�
 ![0](./img/calcAnswer0.PNG)
 ![1](./img/calcAnswer1.PNG)
 모두 0번 계단으로 내려간 경우의 DAT
+
 ![2](./img/calcAnswer2.PNG)
 1번 사람은 0번 계단으로,
 2, 3번 사람은 1번 계단으로 내려간 경우의 DAT
+
 
 ``` C++
 int calcAnswer(priority_queue<Person> q0, priority_queue<Person> q1) {
