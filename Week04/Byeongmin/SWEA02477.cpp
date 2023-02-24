@@ -38,19 +38,19 @@ int main() {
         cin >> N >> M >> K >> A >> B;
 
         int DAT[MAX_K] = {0, };
-        vector<Counter> va;
-        priority_queue<Counter> pqb;
+        priority_queue<Counter> qa;
+        priority_queue<Counter> qb;
         queue<Customer> qka;
-        priority_queue<Customer> pqkb;
+        priority_queue<Customer> qkb;
         
         int tmp;
         for(int i=0;i<N;i++) {
             cin >> tmp;
-            va.push_back({i+1, 0, tmp});
+            qa.push({i+1, 0, tmp});
         }
         for(int i=0;i<M;i++) {
             cin >> tmp;
-            pqb.push({i+1, 0, tmp});
+            qb.push({i+1, 0, tmp});
         }
         for(int i=0;i<K;i++) {
             cin >> tmp;
@@ -61,33 +61,45 @@ int main() {
 
         while(!qka.empty()) {
             Customer customer = qka.front();qka.pop();
-            Counter counter;
+            Counter counter = qa.top(); qa.pop();
 
-            cout << "[" << customer.id << "] " << " --> [" << counter.id << "]\n";
+            while(customer.time > counter.time) {
+                counter.time = customer.time;
+                qa.push(counter);
+                counter = qa.top(); qa.pop();
+            }
+            // cout << "[" << customer.id << "] " << " --> [" << counter.id << "]\n";
+            // cout << "Started at " << counter.time << '\n';
+            counter.time += counter.duration;
+            customer.time = counter.time;
 
+            qa.push(counter);
+            qkb.push({customer.id, customer.time, counter.id});
 
-            cout << "Finished at " << counter.time << "\n\n";
+            // cout << "Finished at " << counter.time << "\n\n";
         }
 
-        cout << "\n-------------------------------------\n\n";
+        // cout << "\n-------------------------------------\n\n";
 
-        while(!pqkb.empty()) {
-            Customer customer = pqkb.top();pqkb.pop();
-            Counter counter = pqb.top();pqb.pop();
+        while(!qkb.empty()) {
+            Customer customer = qkb.top();qkb.pop();
+            Counter counter = qb.top();qb.pop();
 
-            cout << "[" << customer.id << "] " << " --> [" << counter.id << "]\n";
-
-            if(customer.time > counter.time) {
-                cout << "Started at " << customer.time << '\n';
-                counter.time = customer.time + counter.duration;
-            } else {
-                cout << "Started at " << counter.time << '\n';
-                counter.time += counter.duration;
+            while(customer.time > counter.time) {
+                counter.time = customer.time;
+                qb.push(counter);
+                counter = qb.top(); qb.pop();
             }
-            pqb.push(counter);
+
+            // cout << "[" << customer.id << "] " << " --> [" << counter.id << "]\n";
+            // cout << "Started at " << customer.time << '\n';
+
+            counter.time += counter.duration;
+
+            qb.push(counter);
 
             if(customer.counterA_id == A && counter.id == B) answer += customer.id;
-            cout << "Finished at " << counter.time << "\n\n";
+            // cout << "Finished at " << counter.time << "\n\n";
         }
 
         if(!answer) answer = -1;
