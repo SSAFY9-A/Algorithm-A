@@ -6,8 +6,6 @@
 // 제일 처음 계단을 빠져나갈 사람은 무조건 고를 수 없다.
 // 예외 케이스 : 내가 계단에 가깝지만 내가 빨라서 다른 친구에게 양보하고
 // 다른 계단으로 가는 착한 친구가 있을 수 있을까?
-
-// 조합을 비트연산으로 하면 좋겠다
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -24,7 +22,7 @@ struct Person
 	int dis1;
 };
 
-bool cmp0 (Person A, Person B)
+bool cmp0(Person A, Person B)
 {
 	if (A.dis0 < B.dis0)
 		return true;
@@ -53,6 +51,29 @@ vector<Step> down_time;    // 계단을 내려가는 시간
 vector<Person> people;    // 사람 정보 ( 0 ~ 9 )
 vector<Person> select0;		// 0번 계단을 골른 사람들
 vector<Person> select1;		// 1번 계단을 고른 사람들
+
+void print_select()
+{
+	cout << "select0 : ";
+	for (int i = 0; i < select0.size(); i++)
+		cout << "(" << select0[i].y << "," << select0[i].x << ")" << select0[i].dis0 << " ";
+
+	cout << "\nselect1 : ";
+	for (int i = 0; i < select1.size(); i++)
+		cout << "(" << select1[i].y << "," << select1[i].x << ")" << select1[i].dis1 << " ";
+	cout << "\n\n";
+	return;
+}
+
+void print_people()
+{
+	cout << "peple : ";
+	for (Person x : people)
+	{
+		cout << "(" << x.y << "," << x.x << ") ";
+	}
+	cout << "\n";
+}
 
 void init()
 {
@@ -86,35 +107,28 @@ void init()
 void cal()
 {
 	// 계단 0이 끝나는 시간 구하기 (이미 정렬되어 있음)
-	sort(select0.begin(), select0.end(), cmp0);
 	int time0 = 0;
 	if (!select0.empty())
 	{
 		time0 = select0[(select0.size() - 1) % 3].dis0 + down_time[0].time;
 		for (int i = (select0.size() - 1) % 3 + 3; i < select0.size(); i += 3)
 		{
-			int wait_time;
-			if (select0[i].dis0 >= time0)
-				wait_time = 0;
-			else
-				wait_time = time0 - select0[i].dis0;
+			int wait_time = max(time0 - select0[i].dis0, 0);
 			time0 = select0[i].dis0 + down_time[0].time + wait_time;
 		}
 	}
-	// 계단 1이 끝나는 시간 구하기
-	sort(select1.begin(), select1.end(), cmp1);
+	// 계단 1이 끝나는 시간 구하기 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+	vector<Person> tmp = select1;
+	sort(tmp.begin(), tmp.end(), cmp1);
+
 	int time1 = 0;
-	if (!select1.empty())
+	if (!tmp.empty())
 	{
-		time1 = select1[(select1.size() - 1) % 3].dis1 + down_time[1].time;
-		for (int i = (select1.size() - 1) % 3 + 3; i < select1.size(); i += 3)
+		time1 = tmp[(tmp.size() - 1) % 3].dis1 + down_time[1].time;
+		for (int i = (tmp.size() - 1) % 3 + 3; i < tmp.size(); i += 3)
 		{
-			int wait_time;
-			if (select1[i].dis1 >= time1)
-				wait_time = 0;
-			else
-				wait_time = time1 - select1[i].dis1;
-			time1 = select1[i].dis1 + down_time[1].time + wait_time;
+			int wait_time = max(time1 - tmp[i].dis1, 0);
+			time1 = tmp[i].dis1 + down_time[1].time + wait_time;
 		}
 	}
 	// 최소 시간인지 확인하기
