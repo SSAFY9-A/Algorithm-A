@@ -142,7 +142,7 @@
     <td align="right">1ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">1ms</td>
     <td>송유빈</td>
   </tr>
     <tr>
