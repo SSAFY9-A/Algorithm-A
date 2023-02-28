@@ -144,7 +144,7 @@
   <tr>
     <td align="center"> <a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/A%ED%98%95_%EA%B8%B0%EC%B6%9C2">[pro] <br>주식 거래</a> </td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">1ms</td>
     <td align="right">1ms</td>
     <td align="right"></td>
     <td align="right"></td>
