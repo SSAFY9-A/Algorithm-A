@@ -13,6 +13,9 @@
 스터디에서 다루고 있는 상당 부분의 문제는 SW Expert Academy에 있습니다.
 
 # 활동 사진
+![1](https://user-images.githubusercontent.com/99806622/221754948-18c37d88-9864-4f1d-af6e-58d00cbaed9c.jpg)
+![2](https://user-images.githubusercontent.com/99806622/221754949-84a38674-d590-4bb7-9c34-8ad90c138129.jpg)
+![3](https://user-images.githubusercontent.com/99806622/221754953-579db712-3e0b-407a-827d-9d527d0e84fa.jpg)
 
 
 <table>
