@@ -29,6 +29,7 @@ struct node
     int cusNum;
     int arrive;
     int act;
+    int checkA;
 };
 struct Line
 {
@@ -47,6 +48,9 @@ Line Alist[9]; //접수창구 확인
 Line Blist[9]; //정비창구 확인
 
 vector<node>customer;
+
+int SUM;
+
 bool cmp(node left, node right) { return left.arrive < right.arrive; }
 int N, M, K, A, B;
 int MaxArrive;
@@ -118,10 +122,7 @@ void run()
 
     while (1)
     {
-       
-        //마지막 사람이 끝난다면!
         if (customer[sz - 1].act == 4) break;
-
         for (int i = 0; i < customer.size(); i++) // 1.customer가 순서대로 들어오면 들어가야 할 곳을 찾자
         {
 
@@ -139,7 +140,9 @@ void run()
                     Alist[next].cusNum = i + 1;
                     Alist[next].Time = 1;
                     customer[i].act = 1;
+                    customer[i].checkA = next+1;
                     reception_wait.pop();
+                    if(next+1==A)
                     continue;
                 }
 
@@ -166,6 +169,7 @@ void run()
                     Blist[next].cusNum = i + 1;
                     Blist[next].Time = 1;
                     customer[i].act = 3;
+                    if (customer[i].checkA == A && next + 1 == B) SUM += customer[i].cusNum;
                     repair_wait.pop();
                     continue;
                 }
@@ -187,16 +191,38 @@ void run()
 
 
 }
+void init()
+{
+    MaxArrive = 0;
+    SUM = 0;
+    reception_time.clear(); 
+    reception.clear();
+    while(!reception_wait.empty())reception_wait.pop();
 
+    repair_time.clear();;
+    repair.clear(); //정비창구 사람확인
+    while (!repair_wait.empty())repair_wait.pop();
+
+    for (int i = 0; i < 9; i++)
+    {
+        Alist[i].Time = 0;
+        Alist[i].cusNum = -1;
+        Blist[i].Time = -0;
+        Blist[i].cusNum = -1;
+    }
+    
+   customer.clear();
+}
 int main()
 {
-    freopen("input.txt", "r", stdin);
+    //freopen("input.txt", "r", stdin);
     int T;
     int input;
     cin >> T;
     for (int tc = 1; tc <= T; tc++)
     {
-        MaxArrive = 0;
+        
+        init();
         cin >> N >> M >> K >> A >> B;
         for (int i = 0; i < N; i++)
         {
@@ -212,11 +238,12 @@ int main()
         {
             cin >> input;
             //순서대로 들어와서 정렬 안해도됨. 
-            customer.push_back({ i + 1,input,0 });
+            customer.push_back({ i + 1,input,0,-1 });
             reception_wait.push(i + 1);
             MaxArrive = input;
         }
         run();
+        cout <<"#"<<tc<<" "<< SUM<<"\n";
     }
 
 }
