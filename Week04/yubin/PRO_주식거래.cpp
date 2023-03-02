@@ -13,17 +13,17 @@ int now;
 
 struct node
 {
-	int me;
-	int de; //다음달과 차이 
+	int me; 
 	int ori; //현재의 가격
+	int plus; //가능한 이득
 };
 
 //차이는 커야 하고, 현재 가격은 작아야함!
 bool cmp(node right, node left)
 {
-	if (right.de > left.de)
+	if (right.plus > left.plus)
 		return true;
-	else if (right.de < left.de)
+	else if (right.plus < left.plus)
 		return false;
 	else if (right.ori < left.ori)
 		return true;
@@ -35,6 +35,7 @@ void run()
 {
 	int M = 0;
 	int minus;
+	int plus;
 
 	//일단 저장하고 
 	for (int k = 0; k < L; k++)
@@ -59,8 +60,12 @@ void run()
 		for (int i = 0; i < N; i++)
 		{
 			minus = v[i][k + 1] - v[i][k];
+
 			if (minus > 0)
-				Sort_List.push_back({ i,minus ,v[i][k] });
+			{
+				plus = now / v[i][k];
+				Sort_List.push_back({ i,v[i][k],plus*minus });
+			}
 			if (M < minus)
 				M = minus;
 		}
