@@ -4,16 +4,21 @@
 using namespace std;
 int Ms, Ma;//첫 시드액과 월별 투자금액
 int N, L;//종목 수와 데이터 기간. 종목수와 기간은 15이하. 
+
 vector<int>v[15];
+
 int buy[15];
 int Max;
 int now;
+
 struct node
 {
 	int me;
-	int de;
-	int ori;
+	int de; //다음달과 차이 
+	int ori; //현재의 가격
 };
+
+//차이는 커야 하고, 현재 가격은 작아야함!
 bool cmp(node right, node left)
 {
 	if (right.de > left.de)
@@ -30,16 +35,18 @@ void run()
 {
 	int M = 0;
 	int minus;
-	
+
 	//일단 저장하고 
-	for (int k = 0; k <L; k++)
+	for (int k = 0; k < L; k++)
 	{
 		vector<node>Sort_List;
 		M = 0;
-		//일단 팔아야함. 
-		if(k!=0)
+		//k가 0개월이 아니라면 월별 투자금액 증가. 
+		if (k != 0)
 			now = now + Ma;
-		for (int i = 0; i <N; i++)
+
+		//전 달에 매수항목이 있다면 매도.
+		for (int i = 0; i < N; i++)
 		{
 			if (buy[i] > 0)
 			{
@@ -48,11 +55,12 @@ void run()
 				buy[i] = 0;
 			}
 		}
+		//다음달과 차이 확인
 		for (int i = 0; i < N; i++)
 		{
-			minus = v[i][k+1] - v[i][k];
-			if(minus>0)
-				Sort_List.push_back({ i,minus ,v[i][k]});
+			minus = v[i][k + 1] - v[i][k];
+			if (minus > 0)
+				Sort_List.push_back({ i,minus ,v[i][k] });
 			if (M < minus)
 				M = minus;
 		}
@@ -61,26 +69,26 @@ void run()
 		{
 			continue;
 		}
-		//만일? 플러스가 있다?
+		//만일? 플러스가 있다? 일단 정렬!
 		sort(Sort_List.begin(), Sort_List.end(), cmp);
+
 		for (int i = 0; i < Sort_List.size(); i++)
 		{
 			//구매하자.
-			if (now <v[Sort_List[i].me][k]) continue;
-			int num = now / v[Sort_List[i].me][k];
-			int rest=now% v[Sort_List[i].me][k];
+			if (now < v[Sort_List[i].me][k]) continue;
+			int num = now / v[Sort_List[i].me][k]; //몫은 살 수 있는 수 
+			int rest = now % v[Sort_List[i].me][k]; //나머지는 now값. 
 			buy[Sort_List[i].me] = num;
 			//cout << "원래는 " << now;
 			now = rest;
-			
-			//cout << " k는 " << k <<  " , "<< Sort_List[i].me<<"종목을 "<<num<<"개 사서 남은건" << now << "\n";
-			
 		}
 	}
-	//마지막달!
+
+	//마지막달! 사는거 없이 매수한게 있다면 매도!
 	now = now + Ma;
 	for (int i = 0; i < N; i++)
 	{
+
 		if (buy[i] > 0)
 		{
 			//i종목을 buy[i]만큼 샀다는 말. 
@@ -102,7 +110,7 @@ int main()
 		cin >> N >> L;
 		Max = 0;
 		now = 0;
-		for (int i = 0; i <N; i++)
+		for (int i = 0; i < N; i++)
 		{
 			for (int j = 0; j <= L; j++)
 			{
@@ -113,9 +121,9 @@ int main()
 		now = Ms;
 		run();
 		origin = Ms + Ma * L; //구한 수익을 이거에 빼야한다. 
-		cout << "#" << tc << " " << now-origin<< "\n";
+		cout << "#" << tc << " " << now - origin << "\n";
 		for (int i = 0; i < 15; i++)
 			v[i].clear();
-		
+
 	}
 }
