@@ -18,6 +18,13 @@
 ![3](https://user-images.githubusercontent.com/99806622/221754953-579db712-3e0b-407a-827d-9d527d0e84fa.jpg)
 
 
+
+<details>
+<summary>2월스터디</summary>
+<div markdown="1">       
+
+
+
 <table>
 <!-- 목차 -->
   <tr>
@@ -161,10 +168,35 @@
     <td align="right">0ms</td>
     <td>홍의선</td>
   </tr>
+  </table>
+</div>
+</details>
+  
 
-<!-- 5주차 -->
+<table>
+<!-- 목차 -->
   <tr>
-    <td rowspan="4">5주차</td>
+    <td rowspan="2" colspan="2"></td>
+    <td colspan="6" align="center">통과 시간</td>
+    <td rowspan="2">발표자</td>
+  </tr>
+
+  
+
+<!-- 목차 -->
+  <tr>
+    <td>류병민</td>
+    <td>송유빈</td>
+    <td>인정환</td>
+    <td>채문희</td>
+    <td>홍의선</td>
+    <td>황기찬</td>
+  </tr>
+  
+    
+<!-- 1주차 -->
+  <tr>
+    <td rowspan="4">1주차</td>
     <td align="center"> </td>
     <td align="right"></td>
     <td align="right"></td>
@@ -205,9 +237,9 @@
     <td></td>
   </tr>
 
-<!-- 6주차 -->
+<!-- 2주차 -->
   <tr>
-    <td rowspan="5">6주차</td>
+    <td rowspan="5">2주차</td>
     <td></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -259,3 +291,4 @@
   </tr>
  
 </table>
+
