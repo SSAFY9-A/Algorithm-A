@@ -197,7 +197,7 @@
 <!-- 1주차 -->
   <tr>
     <td rowspan="4">1주차</td>
-    <td align="center"> <a href="[https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf](https://www.acmicpc.net/problem/17136)">[백준 골드2]<br> 색종이 붙이기</a>
+    <td align="center"> <a href="[(https://www.acmicpc.net/problem/17136])">[백준 골드2]<br> 색종이 붙이기</a>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
