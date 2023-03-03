@@ -164,7 +164,50 @@
 
 <!-- 5주차 -->
   <tr>
-    <td rowspan="3">5주차</td>
+    <td rowspan="4">5주차</td>
+    <td align="center"> </td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr> 
+    <tr>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+
+<!-- 6주차 -->
+  <tr>
+    <td rowspan="5">6주차</td>
     <td></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -194,5 +237,25 @@
     <td align="right"></td>
     <td></td>
   </tr> 
+    <tr>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
  
 </table>
