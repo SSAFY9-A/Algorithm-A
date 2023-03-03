@@ -214,7 +214,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>황기찬</td>
   </tr>
     <tr>
     <td></td>
@@ -224,7 +224,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>류병민</td>
   </tr> 
     <tr>
     <td></td>
@@ -234,7 +234,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>채문희</td>
   </tr>
 
 <!-- 2주차 -->
@@ -247,7 +247,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>송유빈</td>
   </tr>
   <tr>
     <td></td>
@@ -257,7 +257,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>홍의선</td>
   </tr>
     <tr>
     <td></td>
@@ -267,7 +267,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>인정환</td>
   </tr> 
     <tr>
     <td></td>
@@ -277,7 +277,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>황기찬</td>
   </tr>
   <tr>
     <td></td>
