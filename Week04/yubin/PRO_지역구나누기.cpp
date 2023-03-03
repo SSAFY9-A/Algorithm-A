@@ -11,7 +11,7 @@ int parent[8];
 int via[8];
 int path[8]; //나눈 그룹 확인
 int MIN = 21e8;
-vector<int>cost;
+vector<int>people;
 
 int Find(int now)
 {
@@ -26,31 +26,35 @@ void Union(int a, int b)
     parent[pb] = pa;
 }
 
-//여기만 짜면 될듯!!
+//연결되어있는지 확인
 int checkAB(vector<int>a)
 {
-    //Union확인->내일ㄱ
+    
     int sz = a.size();
     for (int i = 0; i < sz - 1; i++)
         for (int j = i + 1; j < sz; j++)
             if (map[a[i]][a[j]] == 1)
             {
+                //map[i][j]=1일때, 연결함. 
                 Union(a[i], a[j]);
             }
+    //모두가 연결됐다면 FIND 가 다 같아야함. 
     int originFind = Find(a[0]);
     for (int i = 0; i < sz; i++)
         if (Find(a[i]) != originFind)
             return 0;
     return 1;
 }
-int SUM(vector<int>a)
+
+int peopleSUM(vector<int>a)
 {
     int sz = a.size();
     int s = 0;
     for (int i = 0; i < sz; i++)
-        s += cost[a[i]];
+        s += people[a[i]];
     return s;
 }
+
 void divAB()
 {
     vector<int>A;
@@ -68,8 +72,8 @@ void divAB()
    
     if (checkAB(A) * checkAB(B) == 1)
     {
-        sumA = SUM(A);
-        sumB = SUM(B);
+        sumA =peopleSUM(A);
+        sumB = peopleSUM(B);
         if (MIN > abs(sumA - sumB))
             MIN = abs(sumA - sumB);
     }
@@ -99,6 +103,7 @@ void dfs(int now, int level)
     }
 }
 
+//N/2 만큼 반복해서 dfs 돌림. 
 void start()
 {
     for (int i = 1; i <= N / 2; i++)
@@ -110,7 +115,7 @@ void init()
     MIN = 21e8;
     for (int i = 0; i < N; i++)
         parent[i] = i;
-    cost.clear();
+    people.clear();
     memset(via, 0, sizeof(via));
     memset(path, 0, sizeof(path));
 }
@@ -131,7 +136,7 @@ int main()
         for (int i = 0; i < N; i++)
         {
             cin >> input;
-            cost.push_back(input);
+            people.push_back(input);
         }
         start();
         cout << "#"<<tc<<" "<<MIN<<'\n';
