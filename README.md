@@ -198,7 +198,7 @@
   <tr>
     <td rowspan="4">1주차</td>
     <td align="center"> <a href="https://www.acmicpc.net/problem/17136">[백준 골드2]<br> 색종이 붙이기</a> </td>
-    <td align="right"><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&problemLevel=5&contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=5&pageSize=10&pageIndex=1">[SWEA D4]<br> 혁진이의 프로그램 검증</a></td>
+    <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
@@ -207,7 +207,7 @@
     <td>인정환</td>
   </tr>
   <tr>
-    <td></td>
+    <td align="center"><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&problemLevel=5&contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=5&pageSize=10&pageIndex=1">[SWEA D4]<br> 혁진이의 프로그램 검증</a></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
