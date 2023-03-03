@@ -198,14 +198,13 @@
   <tr>
     <td rowspan="4">1주차</td>
     <td align="center"> <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf">[SWEA 1767]<br> 프로세서 연결하기</a>
-    <td align="center"> </td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td></td>
+    <td>인정환</td>
   </tr>
   <tr>
     <td></td>
