@@ -202,7 +202,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">16ms</td>
     <td align="right"></td>
     <td>인정환</td>
   </tr>
