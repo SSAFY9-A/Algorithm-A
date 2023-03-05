@@ -33,7 +33,6 @@ void dfs(int y, int x) {
     if(used >= answer) return;
 
     if(total == 0) { // 다 덮었으면
-        cout << "returning (" << y << ", " << x << ")\n";
         isAvailable = true;
         if(answer > used) answer = used;
         return;
@@ -46,26 +45,39 @@ void dfs(int y, int x) {
                 if(!check(i, j, size)) continue;
                 if(!papers[size]) continue;
 
-                cout << "(" << i << ", " << j << ") " << size << '\n';
-                cin >> t;
+                // cout << "(" << i << ", " << j << ") " << size << '\n';
+                // cout << "[total] " << total << '\n';
+                // cout << "[used] " << used << '\n';
+                // cin >> t;
 
                 papers[size]--;
                 fill(i, j, size, 0);
                 total -= size * size;
                 ++used;
+                
+                // for(int yy=1;yy<SIZE;yy++) {
+                //     for(int xx=1;xx<SIZE;xx++) cout << arr[yy][xx] << ' ';
+                //     cout << '\n';
+                // }
+                // cin >> t;
+
                 dfs(i, j+size);
                 --used;
                 total += size * size;
                 fill(i, j, size, 1);
                 papers[size]++;
-                ++size;
             }
+            return;
         }
         x = 1;
     }
 }
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
     for(int i=1;i<SIZE;i++)for(int j=1;j<SIZE;j++) {
         cin >> arr[i][j];
         presum[i][j] = arr[i][j];
