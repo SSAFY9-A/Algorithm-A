@@ -54,7 +54,7 @@
     <td align="right">18ms</td>
     <td align="right">94ms</td>
     <td align="right">1,120ms</td>
-    <td align="right"></td>
+    <td align="right">17ms</td>
     <td align="right">227ms</td>
     <td align="right">1,272ms</td>
     <td></td>
@@ -201,7 +201,7 @@
     <td align="right">12ms</td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">16ms</td>
     <td align="right">16ms</td>
     <td align="right"></td>
     <td>인정환</td>
