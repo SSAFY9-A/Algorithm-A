@@ -232,7 +232,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">24ms</td>
     <td align="right"></td>
     <td>채문희</td>
   </tr>
