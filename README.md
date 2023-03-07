@@ -222,7 +222,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">0ms</td>
     <td align="right">0ms</td>
     <td>류병민</td>
   </tr> 
