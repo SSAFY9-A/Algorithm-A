@@ -228,7 +228,7 @@
   </tr> 
     <tr>
     <td align="center"><a href="https://www.acmicpc.net/problem/3584">[백준 골드4]<br> 가장 가까운 공통 조상</a></td>
-    <td align="right"></td>
+    <td align="right">24ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
