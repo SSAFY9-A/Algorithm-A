@@ -218,7 +218,7 @@
   </tr>
     <tr>
     <td align="center"><a href="https://www.acmicpc.net/problem/17472">[백준]<br> 다리 만들기 2</a></td>
-    <td align="right"></td>
+    <td align="right">0ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
