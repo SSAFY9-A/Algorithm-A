@@ -16,18 +16,17 @@ int flag = 0;
 
 void dfs(int cy, int cx, int d)
 {
-    if (flag == 2 )
+    if (flag == 1 )
         return;
     
     checkloop[cy][cx][d][Memory]++;
     //cout << cy << "," << cx << " d= " << d <<" flag="<<flag <<" memory= "<<Memory << '\n';
     if (checkloop[cy][cx][d][Memory] > 2)
     {
-        flag = 1;
         return;
     }
     if (v[cy][cx] == '@') {
-        flag = 2;
+        flag = 1;
         return;
     }
 
@@ -81,10 +80,10 @@ void dfs(int cy, int cx, int d)
                 saveY = (saveY + R) % R;
 
             dfs(saveY, saveX, d);
-            
+      
             
         }
-
+ 
     }
     if (v[cy][cx] != '?')
     {
@@ -137,7 +136,7 @@ int main()
         else {
             dfs(0, 0, 3);
 
-            if (flag == 1)
+            if (flag == 0)
                 cout << "#" << tc << " NO\n";
             else
                 cout << "#" << tc << " YES\n";
