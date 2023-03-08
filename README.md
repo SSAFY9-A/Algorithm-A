@@ -209,7 +209,7 @@
   <tr>
     <td align="center"><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&problemLevel=5&contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=5&pageSize=10&pageIndex=1">[SWEA D4]<br> 혁진이의 프로그램 검증</a></td>
     <td align="right">14ms</td>
-    <td align="right"></td>
+    <td align="right">12ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right">15ms</td>
