@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstring>
 using namespace std;
 
 #define MAX_N 50
@@ -32,33 +32,19 @@ void printDebug(int y, int x) {
 
 void dfs(Node now, int d, int mirror) {
     if(answer <= mirror) return;
-    if(visited[now.y][now.x][d] && visited[now.y][now.x][d] < mirror) return;
+    if(visited[now.y][now.x][d] && visited[now.y][now.x][d] >= mirror) return;
 
-    int ny = now.y;
-    int nx = now.x;
-
-    do {
-        ny += dy[d];
-        nx += dx[d];
-        if(ny < 0 || ny >= N || nx < 0 || nx >= N) return;
-        // printDebug(ny, nx);
-    } while(arr[ny][nx] == '.');
-    if(arr[ny][nx] == '*') return;
-    if(arr[ny][nx] == '#') {
-        if(answer > mirror) answer = mirror;
-        return;
-    }
-    if(arr[ny][nx] == '!') {
-        visited[ny][nx][d] = mirror;
-        dfs({ny, nx}, d, mirror);
-        dfs({ny, nx}, (d+1)%4, mirror+1);
-        dfs({ny, nx}, (d+3)%4, mirror+1);
-        visited[ny][nx][d] = 0;
+    int ny, nx;
+    for(int d=0;d<4;d++) {
+        ny = now.y + dy[d];
+        nx = now.x + dx[d];
     }
 }
 
 int main() {
     cin >> N;
+
+    memset(visited, 0, sizeof(visited));
 
     for(int i=0;i<N;i++) {
         cin >> arr[i];
