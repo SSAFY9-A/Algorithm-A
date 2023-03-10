@@ -246,7 +246,7 @@
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">4ms</td>
     <td>송유빈</td>
   </tr>
   <tr>
