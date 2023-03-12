@@ -199,8 +199,8 @@
     <td rowspan="4">1주차</td>
     <td align="center"> <a href="https://www.acmicpc.net/problem/17136">[백준 골드2]<br> 색종이 붙이기</a> </td>
     <td align="right">12ms</td>
-    <td align="right">32ms</td>
     <td align="right"></td>
+    <td align="right">32ms</td>
     <td align="right">16ms</td>
     <td align="right">16ms</td>
     <td align="right">180ms</td>
