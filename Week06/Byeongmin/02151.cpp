@@ -3,6 +3,15 @@
     거울 설치
 */
 
+/*
+5
+....#
+.....
+!...!
+....*
+#....
+*/
+
 #include <cstring>
 #include <iostream>
 using namespace std;
@@ -42,7 +51,7 @@ void dfs(Node now, int dir, int mirror) {
     if (visited[now.y][now.x][dir]!=-1 && visited[now.y][now.x][dir] < mirror)
         return;
     visited[now.y][now.x][dir] = mirror;
-    //printDebug(now.y, now.x);
+    printDebug(now.y, now.x);
 
     int ny = now.y + dy[dir];
     int nx = now.x + dx[dir];
@@ -62,6 +71,9 @@ void dfs(Node now, int dir, int mirror) {
 }
 
 int main() {
+    // ios_base::sync_with_stdio(false);
+    // cin.tie(NULL);
+    // cout.tie(NULL);
     cin >> N;
 
     memset(visited, -1, sizeof(visited));
