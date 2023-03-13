@@ -15,11 +15,12 @@ int sum;
 bool isValid(int sy, int sx, int t)
 {
 	if (dat[t] >= 5) return false;
+	if ( sy + t - 1 >= 10 || sx+t-1 >= 10)  return false;
 	for (int y = sy; y < sy + t; y++)
 	{
 		for (int x = sx; x < sx + t; x++)
 		{
-			if (y < 0 || x < 0 || y >= 10 || x >= 10)  return false;
+			
 			if (map[y][x] == 0) return false;
 		}
 	}
@@ -31,41 +32,37 @@ bool isValid(int sy, int sx, int t)
 void sv(int level)
 {
 
-
-	for (int y = level / 10; y < 10; y++)
-		for (int x = level % 10; x < 10; x++)
+	if (Min < level) return;
+	for (int y = 0; y < 10; y++)
+		for (int x = 0; x < 10; x++)
 		{
 			if (map[y][x] == 1)
 			{
-				bool a = false;
-				for (int t = 1; t <= 5; t++)
+				for (int t = 5; t >= 1; t--)
 				{
 					if (isValid(y, x, t))
 					{
-						a = true;
 						dat[t]++;
 						sum += t * t;
-						cnt++;
 						for (int q = y; q < y + t; q++)
 							for (int w = x; w < x + t; w++)
 								map[q][w] = 0;
 
-						sv(y * 10 + x + 1);
+						sv(level + 1);
 
 						for (int q = y; q < y + t; q++)
 							for (int w = x; w < x + t; w++)
 								map[q][w] = 1;
 						dat[t]--;
-						cnt--;
 						sum -= t * t;
 					}
 				}
-				if (!a) return;
+				return;
 			}
 		}
 
-	if (sum == num && Min > cnt) Min = cnt;
-	
+	if (sum == num && Min > level) Min = level;
+
 }
 
 
@@ -79,6 +76,7 @@ int main(void)
 				num++;
 		}
 	sv(0);
+	
 	if (Min == 21e8) Min = -1;
 	cout << Min;
 }
