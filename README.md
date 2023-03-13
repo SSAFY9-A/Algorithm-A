@@ -254,7 +254,7 @@
      <td align="center"><a href="https://www.acmicpc.net/problem/2151">[백준 골드3]<br> 거울설치</a></td>
     <td align="right"></td>
     <td align="right"></td>
-    <td align="right"></td>
+    <td align="right">0ms</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right">4ms</td>
