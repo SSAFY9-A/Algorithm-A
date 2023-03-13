@@ -11,7 +11,6 @@ dist 배열m , 들어온 방향
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #define MAX_N 50
-#define MAX_MIRROR ((MAX_N-1)*(MAX_N-1))
 
 struct Node {
 	int y, x, dir, cost;
