@@ -196,7 +196,7 @@
     
 <!-- 1주차 -->
   <tr>
-    <td rowspan="4">1주차</td>
+    <td rowspan="5">1주차</td>
     <td align="center"> <a href="https://www.acmicpc.net/problem/17136">[백준 골드2]<br> 색종이 붙이기</a> </td>
     <td align="right">12ms</td>
     <td align="right"></td>
@@ -236,6 +236,17 @@
     <td align="right">24ms</td>
     <td>채문희</td>
   </tr>
+  </tr> 
+    <tr>
+    <td align="center"><a href="https://www.acmicpc.net/problem/3584">[백준 플래티넘5]<br> LCA2</a></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td align="right"></td>
+    <td></td>
+  </tr>
 
 <!-- 2주차 -->
   <tr>
@@ -250,7 +261,7 @@
     <td>송유빈</td>
   </tr>
   <tr>
-    <td></td>
+    <td align="center"><a href="https://pro.mincoding.co.kr/enterprise/contest/ssafy_9/275/problem/B%ED%98%95_01">땅따먹기</td>
     <td align="right"></td>
     <td align="right"></td>
     <td align="right"></td>
